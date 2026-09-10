@@ -1,0 +1,41 @@
+# Tool Matrix
+
+| Tool | Strength | Core job | Main output |
+|---|---|---|---|
+| 01 | Foundation | Privacy cleanup, quote removal, context summary | `preprocessed.json` |
+| 02 | Foundation | Target-message classification and candidate sampling | `classified.json`, `stats.json`, `candidates.json` |
+| 03 | Foundation | Human verification of model labels | `labels.json` |
+| 04 | Advanced | Calibrate model statistics and build a dataset | `final_dataset.json` |
+| 05 | Advanced | Extract deeper facts with provenance | `deep_facts.json` |
+| 05.5 | Advanced | Turn facts into interview context | interview context |
+| 06 | Advanced | Capture first-person authoritative facts | confirmed interview records |
+| 07 | Intensive | Convert trusted facts into short style-matched samples | synthetic SFT samples |
+| 08 | Intensive | Review SFT training quality | reviewed + deleted + progress |
+| 09 | Intensive | Review/split RAG records | RAG-ready records |
+| 10 | Intensive | Final balanced selection | final balanced dataset |
+
+## Recommended presets
+
+### Basic purification
+`01 → 02 → 03 → 04`
+
+适合已有相对干净聊天集，只需要快速得到可训练数据。
+
+### High-quality persona pipeline
+`01 → 02 → 03 → 04 → 05 → 05.5 → 06 → 07 → 08 → 10`
+
+适合想尽量保留人物语言风格，同时补充长期稳定事实的场景。
+
+### RAG-focused pipeline
+`01 → 05 → 05.5 → 06 → 09`
+
+适合先构建高质量、可复用的人物事实知识库。
+
+## Output principle
+
+每一级都尽量保留“可回溯性”：
+
+- 不直接覆盖原始数据。
+- 审核删除尽量保存原因。
+- 人工确认和第三方事实分开。
+- 合成数据使用单独的 `is_synthetic` / source 信息标记。
