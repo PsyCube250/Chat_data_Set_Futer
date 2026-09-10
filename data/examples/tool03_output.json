@@ -1,0 +1,14 @@
+[
+  {
+    "key": "demo_001|0",
+    "conversation_id": "demo_001",
+    "exchange_index": 0,
+    "target_text": "去啊，不去等着长蘑菇吗",
+    "model_dim": "调皮",
+    "model_confidence": 0.96,
+    "human_dims": [
+      "调皮",
+      "幽默"
+    ]
+  }
+]

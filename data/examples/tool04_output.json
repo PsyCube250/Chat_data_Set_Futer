@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "total_exchanges_in_corpus": 1,
+    "final_dataset_size": 1,
+    "model_precision_per_dimension": {
+      "调皮": 1.0,
+      "幽默": 1.0
+    },
+    "raw_proportions": {
+      "调皮": 1.0,
+      "幽默": 1.0
+    },
+    "calibrated_proportions": {
+      "调皮": 0.5,
+      "幽默": 0.5
+    },
+    "combination_proportions": {
+      "调皮 + 幽默": 1.0
+    },
+    "confidence_keep_threshold": 0.5
+  },
+  "records": [
+    {
+      "conversation_id": "demo_001",
+      "exchange_index": 0,
+      "prior_other_text": "周六还去排练吗？",
+      "target_text": "去啊，不去等着长蘑菇吗",
+      "labels": [
+        {
+          "dim": "调皮",
+          "confidence": 0.96
+        },
+        {
+          "dim": "幽默",
+          "confidence": 0.88
+        }
+      ]
+    }
+  ]
+}

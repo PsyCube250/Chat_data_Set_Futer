@@ -1,0 +1,11 @@
+[
+  {
+    "question": "当事人为什么喜欢参加现场演出？",
+    "extracted_fact": "材料显示，当事人长期把现场演出视为重要的兴趣活动。",
+    "narrator": "匿名材料作者",
+    "narrator_relationship": "朋友",
+    "source_type": "third_party_essay",
+    "material_id": "demo_material_001",
+    "confidence": "medium"
+  }
+]

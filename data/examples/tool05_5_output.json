@@ -1,0 +1,16 @@
+{
+  "interview_dimensions": [
+    {
+      "dimension": "兴趣与选择",
+      "context": [
+        "当事人长期参加现场演出"
+      ],
+      "open_questions": [
+        "现场演出对你为什么重要？"
+      ],
+      "missing_evidence": [
+        "是否为本人明确认可的长期偏好"
+      ]
+    }
+  ]
+}
